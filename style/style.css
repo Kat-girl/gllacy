@@ -81,8 +81,12 @@ body {
   width: 470px;
 }
 
+.navigation-user__list {
+  justify-content: end;
+}
+
 .navigation-user__item:not(:last-of-type) {
-  margin-right: 16px;
+  margin-right: 14px;
 }
 
 .navigation__list {
@@ -90,10 +94,6 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
-}
-
-.navigation-user__list {
-  justify-content: end;
 }
 
 .navigation__link {
@@ -104,6 +104,7 @@ body {
   font-family: "Inter", sans-serif;
   line-height: 20px;
   padding: 8px 16px;
+  box-sizing: border-box;
 }
 
 .navigation-user__link {
@@ -131,6 +132,15 @@ body {
 .navigation__link--search {
   padding: 8px;
   border-radius: 50%;
+}
+
+.navigation-user__link--login {
+  font-size: 16px;
+}
+
+.navigation-user__link--cart {
+  width: 115px;
+  font-size: 14px;
 }
 
 .navigation__icon {
