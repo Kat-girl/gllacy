@@ -54,13 +54,12 @@ body {
   margin: 0;
   border: none;
   border-radius: 26px;
-  padding: 12px 31px;
+  padding: 12px 33px;
   color: #2d3440;
   text-align: center;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  letter-spacing: 1px;
 }
 
 .button--primary {
@@ -301,4 +300,55 @@ body {
   list-style-type: none;
   display: flex;
   gap: 10px;
+}
+
+/* banners */
+.banners {
+  padding-top: 72px;
+}
+
+.banners__title {
+  margin: 0;
+  margin-bottom: 55px;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+  text-align: center;
+}
+
+.banners__container {
+  display: flex;
+  gap: 30px;
+}
+
+.banner {
+  width: 570px;
+  padding: 36px 200px 36px 36px;
+  border-radius: 16px;
+}
+
+.banner--raspberry {
+  background: #ff7799 url("../img/banner-raspberry.png") no-repeat right;
+  background-size: 219px 268px;
+}
+
+.banner--marshmallow {
+  background: #ff7799 url("../img/banner-marshmallow.png") no-repeat right;
+  background-size: 219px 268px;
+}
+
+.banner__title {
+  margin: 0;
+  margin-bottom: 28px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.banner__description {
+  margin: 0;
+  margin-bottom: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
 }
