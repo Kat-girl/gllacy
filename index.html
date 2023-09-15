@@ -232,26 +232,34 @@
         <section class="delivery">
           <div class="delivery__info">
             <h2 class="delivery__title">Доставка любимого мороженого на дом</h2>
-            <p class="delivery__description">Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+            <p class="delivery__description">Хочется полакомиться любимым десертом, <br> но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
           </div>
-          <form action="https://echo.htmlacademy.ru/" method="post" class="delivery__form">
-            <p class="delivery__text">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
-            <label>Дата
-              <span>
-                <span class="visually-hidden">Дополнительная информация</span>
-              </span>
-              <input type="text" name="date" id="date" placeholder="01.04.2020">
-            </label>
-            <label>Телефон
-              <input type="tel" name="phone" placeholder="+7 800 999-00-00">
-            </label>
-            <label>Адрес
-              <span>
-                <span class="visually-hidden">Дополнительная информация</span>
-              </span>
-              <input type="text" name="address" placeholder="ул. Большая Конюшенная, 19/8">
-            </label>
-            <button type="submit">Отправить</button>
+          <form class="delivery__form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="delivery__text">Укажите адрес и дату доставки, и мы свяжемся <br> с вами, чтобы подтвердить заказ.</p>
+            <div class="delivery__inputs-group">
+              <label class="delivery__label delivery__label--date">Дата
+                <span>
+                  <button class="button--tooltip" type="button">
+                    <img src="img/tooltip-icon.svg" alt="Кнопка дополнительной информации">
+                  </button>
+                  <span class="visually-hidden">Дополнительная информация</span>
+                </span>
+                <input class="form__input delivery__input delivery__input--date" type="text" name="date" id="date" placeholder="01.04.2020">
+              </label>
+              <label class="delivery__label delivery__label--phone">Телефон
+                <input class="form__input delivery__input delivery__input--phone" type="tel" name="phone" id="phone" placeholder="+7 800 999-00-00">
+              </label>
+              <label class="delivery__label delivery__label--address">Адрес
+                <span>
+                  <button class="button--tooltip" type="button">
+                    <img src="img/tooltip-icon.svg" alt="Кнопка дополнительной информации">
+                  </button>
+                  <span class="visually-hidden">Дополнительная информация</span>
+                </span>
+                <input class="form__input delivery__input delivery__input--address" type="text" name="address" id="address" placeholder="ул. Большая Конюшенная, 19/8">
+              </label>
+            </div>
+            <button class="button button--extra delivery__button" type="submit">Отправить</button>
           </form>
         </section>
         <section class="contacts">
