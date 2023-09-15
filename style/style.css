@@ -357,6 +357,7 @@ body {
 /* goods */
 .goods {
   padding-top: 81px;
+  margin-bottom: 80px;
 }
 
 .goods__title {
@@ -383,7 +384,7 @@ body {
   border-radius: 8px;
   padding: 0 40px 24px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: min-content auto;
 }
 
 .goods__image {
@@ -454,4 +455,121 @@ body {
   grid-column: 2 / 3;
   justify-self: end;
   align-self: start;
+}
+
+/* description */
+.description {
+  margin-bottom: 80px;
+  padding: 24px;
+  border-radius: 16px;
+  background: url("../img/waffle-background.jpg") center center;
+  background-size: cover;
+}
+
+.description__content {
+  padding: 56px 40px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  color: #565c66;
+  margin: auto;
+}
+
+.description__title {
+  margin: 0;
+  margin-bottom: 56px;
+  color: #2d3440;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
+.description__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 32px;
+}
+
+.description__item {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  padding-left: 64px;
+  position: relative;
+}
+
+.description__item--ice-cream::before {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("../img/icon-ice-cream.svg");
+}
+
+.description__item--cow::before {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("../img/icon-cow.svg");
+}
+
+.description__item--leaf::before {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("../img/icon-leaf.svg");
+}
+
+.description__item--thermometer::before {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("../img/icon-thermometer.svg");
+}
+
+/* newsletter-container */
+.newsletter-container {
+  display: flex;
+  gap: 30px;
+}
+
+.news {
+  width: 570px;
+  border-radius: 16px;
+  background: #d3d3d3 url("../img/set-up.jpg") no-repeat bottom -75px right -50px;
+  background-size: cover;
+  color: #2d3440;
+  padding: 32px 235px 67px 32px;
+  box-sizing: border-box;
+}
+
+.news__title {
+  margin: 0;
+  margin-bottom: 12px;
+  color: #565c66;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.news__link {
+  color: #2d3440;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.newsletter {
+  width: 570px;
 }
