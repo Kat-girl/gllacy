@@ -76,11 +76,17 @@ body {
   color: #fcfcfc;
 }
 
+.button--link {
+  justify-content: start;
+  text-decoration: none;
+}
+
 .button--tooltip {
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+  box-shadow: none;
 }
 
 .header {
@@ -306,15 +312,18 @@ body {
   opacity: 1;
 }
 
-.slider__social-list {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.social-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
   gap: 10px;
+}
+
+.slider__social-list {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /* banners */
@@ -642,6 +651,7 @@ body {
   gap: 135px;
   padding: 64px 64px 64px 100px;
   position: relative;
+  margin-bottom: 84px;
 }
 
 .delivery::before {
@@ -700,10 +710,10 @@ body {
   margin-bottom: 32px;
 }
 
-.delivery__inputs-group {
+.delivery__inputs-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px 16px;
+  gap: 22px 16px;
 }
 
 .delivery__label {
@@ -711,15 +721,10 @@ body {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  margin-bottom: 8px;
-}
-
-.delivery__label:last-of-type {
-  margin-bottom: 0;
 }
 
 .delivery__input {
-  margin-top: 9px;
+  margin-top: 7px;
 }
 
 .delivery__input--date {
@@ -728,6 +733,7 @@ body {
 
 .delivery__input--phone {
   width: 287px;
+  letter-spacing: 1px;
 }
 
 .delivery__input--address {
@@ -738,4 +744,73 @@ body {
 .delivery__button {
   display: block;
   margin: auto;
+}
+
+/* contacts */
+.contacts {
+  padding: 64px;
+  border-radius: 16px;
+  background: #d3d3d3 url("../img/contacts-ice-cream-bg.jpg") 50% / cover no-repeat;
+  color: #2d3440;
+}
+
+.contacts__content {
+  /* display: flex; для правильного отображения кнопки-ссылки */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-radius: 8px;
+  background: #fcfcfc;
+  box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
+  color: #2d3440;
+  width: 343px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.contacts__text {
+  margin: 0;
+  margin-bottom: 11px;
+  color: #565c66;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.contacts__address {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.contacts__phone {
+  color: #2d3440;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.contacts__extra-info {
+  margin: 0;
+  margin-bottom: 32px;
+  color: #565c66;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* footer */
+.footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.footer__wrapper {
+  width: 1170px;
+  margin: auto;
+  display: flex;
+  align-items: center;
 }
