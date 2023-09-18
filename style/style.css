@@ -250,7 +250,7 @@ body {
   right: 0;
   transform: translateY(-50%);
   width: 327px;
-  height: 327px;
+  height: 313px;
   border-radius: 50%;
   background-color: #ffcbd8;
   z-index: 0;
@@ -317,7 +317,7 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
-  gap: 10px;
+  gap: 11px;
 }
 
 .slider__social-list {
@@ -812,5 +812,57 @@ body {
   width: 1170px;
   margin: auto;
   display: flex;
-  align-items: center;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  row-gap: 8px;
+}
+
+.footer__link {
+  padding-left: 24px;
+  text-decoration: none;
+  color: #2d3440;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.footer__link--current {
+  position: relative;
+  font-weight: 700;
+}
+
+.footer__link--current::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  content: url("../img/heart-fill.svg");
+}
+
+.footer__html-academy-logo {
+  display: block;
+  margin-bottom: 11px;
+}
+
+.credits__description {
+  margin: 0;
+  color: #2d3440;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.credits__link {
+  border-bottom: 1px solid #2d3440;
+  text-decoration: none;
+  color: #2d3440;
 }
