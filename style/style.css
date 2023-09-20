@@ -76,6 +76,15 @@ body {
   color: #fcfcfc;
 }
 
+.button--light {
+  padding: 8px 54px;
+  font-size: 14px;
+  border-radius: 20px;
+  outline: 2px solid #fcfcfc;
+  background-color: rgba(252, 252, 252, 0.3);
+  box-shadow: none;
+}
+
 .button--link {
   justify-content: start;
   text-decoration: none;
@@ -865,4 +874,204 @@ body {
   border-bottom: 1px solid #2d3440;
   text-decoration: none;
   color: #2d3440;
+}
+
+/* catalog */
+.inner-header {
+  padding-top: 28px;
+  margin-bottom: 16px;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 28px;
+}
+
+.breadcrumbs__link {
+  position: relative;
+  color: #2d3440;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.breadcrumbs__link--current {
+  border-bottom: 1px solid #2d3440;
+}
+
+.breadcrumbs__link::before {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 1px;
+  right: -20px;
+  content: url("../img/chevrons-right.svg");
+}
+
+.breadcrumbs__link--current::before {
+  display: none;
+}
+
+.main__title {
+  margin: 0;
+  margin-bottom: 39px;
+  color: #2d3440;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
+/* filter */
+.filter__form {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 16px;
+}
+
+.filter__group {
+  margin: 0;
+  margin-right: 24px;
+  padding: 0;
+  border: none;
+}
+
+.filter__group:last-of-type {
+  margin-right: 16px;
+}
+
+.filter__label {
+  display: block;
+  padding-left: 15px;
+  margin-bottom: 9px;
+  color: #2d3440;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.filter__input {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(252, 252, 252, 0.3);
+  color: #2d3440;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.filter__input--select {
+  padding: 8px 60px 8px 16px;
+  appearance: none;
+  background: rgba(252, 252, 252, 0.3) url("../img/arrow-down.svg") no-repeat center right 14px;
+  background-size: 16px 16px;
+}
+
+.filter__label-input-container {
+  display: flex;
+}
+
+.filter__label--max-price {
+  padding-left: 5px;
+}
+
+.filter__input--price {
+  width: 25px;
+  padding: 0;
+  background-color: transparent;
+  appearance: textfield;
+}
+
+.filter__input--price::-webkit-outer-spin-button,
+.filter__input--price::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.filter__range {
+  border-radius: 20px;
+  background-color: rgba(252, 252, 252, 0.3);
+  padding: 17px 15px;
+}
+
+.range-scale {
+  position: relative;
+  width: 164px;
+  height: 2px;
+  background: rgba(86, 92, 102, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #565c66;
+}
+
+.range-toggle {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2d3440 url("../img/toggle-button.svg");
+}
+
+.toggle-min {
+  top: -7px;
+  left: -7px;
+}
+
+.toggle-max {
+  top: -7px;
+  right: -15px;
+}
+
+.filter__list {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 7px 24px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 18px;
+  background: rgba(252, 252, 252, 0.3);
+}
+
+.filter__item {
+  padding-left: 25px;
+  position: relative;
+}
+
+.control__mark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #2d3440;
+}
+
+.control__mark--checkbox {
+  border-radius: 3px;
+}
+
+.control__label {
+  color: #2d3440;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.filter__button {
+  align-self: end;
 }
