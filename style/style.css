@@ -69,11 +69,70 @@ body {
   color: #2d3440;
 }
 
+.button--primary:hover {
+  outline: 4px solid #fcfcfc;
+  background-color: rgba(252, 252, 252, 0.4);
+  box-shadow: 0 4px 15px 0 rgba(133, 133, 133, 0.15);
+}
+
+.button--primary:focus {
+  outline: 2px solid #2d3440;
+  background-color: rgba(252, 252, 252, 0.5);
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+}
+
+.button--primary:active {
+  border: none;
+  outline: 2px solid #2d3440;
+  background-color: #fcfcfc;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+}
+
+.button--primary:disabled {
+  border-radius: 26px;
+  outline: 4px solid rgba(252, 252, 252, 0.4);
+  background-color: #e7e7e7;
+  box-shadow: none;
+  color: #b9b9b9;
+}
+
 .button--extra {
   border-radius: 26px;
   outline: 4px solid rgba(255, 47, 100, 0.3);
   background-color: #ff2f64;
   color: #fcfcfc;
+}
+
+.button--extra:hover {
+  border: none;
+  outline: 4px solid #ff2f64;
+  background-color: rgba(252, 252, 252, 0.3);
+  color: #2d3440;
+  box-shadow: none;
+}
+
+.button--extra:focus {
+  border: none;
+  outline: 2px solid #2d3440;
+  background-color: #ff2f64;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+  color: #fcfcfc;
+}
+
+.button--extra:active {
+  border: none;
+  outline: 2px solid #2d3440;
+  background-color: #feafc3;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+  color: #fcfcfc;
+}
+
+.button--extra:disabled {
+  border: none;
+  outline: 4px solid rgba(185, 185, 185, 0.3);
+  background-color: #e7e7e7;
+  color: #b9b9b9;
+  box-shadow: none;
 }
 
 .button--light {
@@ -83,6 +142,44 @@ body {
   outline: 2px solid #fcfcfc;
   background-color: rgba(252, 252, 252, 0.3);
   box-shadow: none;
+}
+
+.button--light:hover {
+  border: none;
+  outline: 2px solid rgba(252, 252, 252, 0.3);
+  background-color: #fcfcfc;
+  color: #2d3440;
+}
+
+.button--light:focus {
+  border: none;
+  outline: 2px solid #2d3440;
+  background-color: rgba(252, 252, 252, 0.3);
+  color: #2d3440;
+}
+
+.button--light:active {
+  border: none;
+  outline: none;
+  background-color: rgba(252, 252, 252, 0.5);
+  color: #2d3440;
+}
+
+.button--light:disabled {
+  border: 2px #fcfcfc;
+  opacity: 0.4;
+  background-color: rgba(252, 252, 252, 0.3);
+  color: #2d3440;
+}
+
+.button--loading {
+  background: #fcfcfc url("../img/spinner.svg") no-repeat center right 32px;
+  background-size: 16px 16px;
+  padding-right: 56px;
+}
+
+.button--extra.button--loading {
+  background: #ff2f64 url("../img/spinner-white.svg") no-repeat center right 32px;
 }
 
 .button--link {
@@ -120,6 +217,8 @@ body {
 
 .navigation-user {
   width: 470px;
+  display: flex;
+  justify-content: end;
 }
 
 .navigation-user__list {
@@ -145,26 +244,43 @@ body {
   box-sizing: border-box;
 }
 
+.navigation__link:hover {
+  border-radius: 30px;
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.navigation__link:focus {
+  border: none;
+  border-radius: 30px;
+  outline: 2px solid #2d3440;
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.navigation__link:active {
+  border-radius: 30px;
+  background-color: #fcfcfc;
+}
+
+.navigation__link--catalog .navigation__link-icon {
+  transform: translateY(-2px);
+}
+
+.navigation__link-text {
+  margin-right: 8px;
+}
+
+.navigation__link-icon {
+  fill: #2d3440;
+}
+
 .navigation-user__link {
   border-radius: 27px;
   background-color: rgba(252, 252, 252, 0.3);
 }
 
-.navigation__link--catalog {
-  padding-right: 40px;
-  position: relative;
-}
-
-.navigation__link--catalog::after {
-  content: url("../img/arrow-down.svg");
-  position: absolute;
-  right: 16px;
-  bottom: 6px;
-}
-
 .navigation__link--phone {
   font-weight: 700;
-  padding: 8px 0;
+  /* padding: 8px 0; */
 }
 
 .navigation__link--search {
@@ -181,7 +297,8 @@ body {
   font-size: 14px;
 }
 
-.navigation__icon {
+.navigation-user__link--login .navigation__link-icon,
+.navigation-user__link--cart .navigation__link-icon {
   margin-right: 6px;
 }
 
@@ -495,7 +612,7 @@ body {
 
 /* description */
 .description {
-  margin-top: 40px;
+  margin-top: 24px;
   margin-bottom: 80px;
   padding: 24px;
   border-radius: 16px;
@@ -1148,4 +1265,33 @@ body {
 
 .pagination__button--current {
   background-color: #fcfcfc;
+}
+
+.popup-opened {
+  border-radius: 30px;
+  background-color: #ff4a78;
+  color: #fcfcfc;
+}
+
+.popup-opened:hover {
+  border-radius: 30px;
+  opacity: 0.6;
+  background-color: #ff4a78;
+}
+
+.popup-opened:focus {
+  border: none;
+  border-radius: 30px;
+  outline: 2px solid #000000;
+  background-color: #ff4a78;
+}
+
+.popup-opened:active {
+  border-radius: 30px;
+  opacity: 0.3;
+  background-color: #ff4a78;
+}
+
+.popup-opened .navigation__link-icon {
+  fill: #fcfcfc;
 }
