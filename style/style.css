@@ -260,6 +260,7 @@ body {
 }
 
 .navigation__link:active {
+  outline: none;
   border-radius: 30px;
   background-color: #fcfcfc;
 }
@@ -847,7 +848,7 @@ body {
 .newsletter-container {
   display: flex;
   gap: 30px;
-  margin-bottom: 83px;
+  margin-bottom: 80px;
 }
 
 .news {
@@ -1023,7 +1024,7 @@ body {
 .delivery__inputs-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px 16px;
+  gap: 17px 16px;
 }
 
 .delivery__label {
@@ -1047,7 +1048,7 @@ body {
 }
 
 .delivery__input--address {
-  margin-bottom: 32px;
+  margin-bottom: 29px;
   width: 420px;
 }
 
@@ -1332,10 +1333,7 @@ body {
   margin: 0;
   padding: 0;
   border: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #2d3440 url("../img/toggle-button.svg");
+  background-color: transparent;
 }
 
 .toggle-min {
@@ -1346,6 +1344,52 @@ body {
 .toggle-max {
   top: -7px;
   right: -15px;
+}
+
+.range-toggle-icon circle:first-child {
+  fill: #2d3440;
+}
+
+.range-toggle-icon circle:last-child {
+  fill: #fcfcfc;
+}
+
+.range-toggle:hover .range-toggle-icon circle:first-child {
+  fill: #fcfcfc;
+}
+
+.range-toggle:hover .range-toggle-icon circle:last-child {
+  fill: #2d3440;
+}
+
+.range-toggle:focus {
+  border: none;
+  outline: none;
+}
+
+.range-toggle:focus .range-toggle-icon {
+  outline: 2px solid #2d3440;
+  border-radius: 50%;
+}
+
+.range-toggle:focus .range-toggle-icon circle:first-child {
+  fill: #fcfcfc;
+}
+
+.range-toggle:focus .range-toggle-icon circle:last-child {
+  fill: #2d3440;
+}
+
+.range-toggle:active .range-toggle-icon {
+  outline: none;
+}
+
+.range-toggle:active .range-toggle-icon circle:first-child {
+  fill: #2d3440;
+}
+
+.range-toggle:active .range-toggle-icon circle:last-child {
+  fill: #2d3440;
 }
 
 .filter__list {
@@ -1564,6 +1608,7 @@ body {
 }
 
 .popup-opened:active {
+  outline: none;
   border-radius: 30px;
   opacity: 0.3;
   background-color: #ff4a78;
