@@ -858,7 +858,7 @@ body {
 .news {
   width: 580px;
   border-radius: 16px;
-  background: #d3d3d3 url("../img/news-set-up.jpg") no-repeat bottom -113px right -78px;
+  background: #d3d3d3 url("../img/news-set-up.jpg") no-repeat bottom -105px right -78px;
   background-size: 115%;
   color: #2d3440;
   padding: 33px 100px 32px 32px;
@@ -1170,17 +1170,24 @@ body {
   justify-content: space-between;
 }
 
+.footer__navigation {
+  max-width: 500px;
+}
+
 .footer__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: 150px 206px;
   row-gap: 8px;
 }
 
-.footer__link {
+.footer__item {
   padding-left: 24px;
+}
+
+.footer__link {
   text-decoration: none;
   color: #2d3440;
   font-size: 14px;
@@ -1196,10 +1203,14 @@ body {
 .footer__link--current::before {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -24px;
   width: 16px;
   height: 16px;
   content: url("../img/heart-fill.svg");
+}
+
+.footer__credits {
+  max-width: 250px;
 }
 
 .footer__html-academy-logo {
@@ -1235,8 +1246,11 @@ body {
   gap: 28px;
 }
 
-.breadcrumbs__link {
+.breadcrumbs__item {
   position: relative;
+}
+
+.breadcrumbs__link {
   color: #2d3440;
   font-size: 14px;
   font-weight: 700;
@@ -1603,8 +1617,8 @@ body {
   padding: 2px 8px;
   border: none;
   background-color: transparent;
-  width: 24px;
-  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   border-radius: 50px;
   color: #2d3440;
   font-size: 16px;
