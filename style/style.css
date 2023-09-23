@@ -1278,6 +1278,15 @@ body {
   background-size: 16px 16px;
 }
 
+.filter__input--select:hover {
+  background: rgba(252, 252, 252, 0.5) url("../img/arrow-down.svg") no-repeat center right 14px;
+}
+
+.filter__input--select:focus {
+  background: rgba(252, 252, 252, 0.4) url("../img/arrow-down.svg") no-repeat center right 14px;
+  outline: 2px solid #fcfcfc;
+}
+
 .filter__label-input-container {
   display: flex;
 }
@@ -1287,7 +1296,7 @@ body {
 }
 
 .filter__input--price {
-  width: 25px;
+  width: 27px;
   padding: 0;
   background-color: transparent;
   appearance: textfield;
@@ -1353,21 +1362,90 @@ body {
 
 .filter__item {
   padding-left: 25px;
+}
+
+.control {
   position: relative;
 }
 
 .control__mark {
   position: absolute;
-  top: 3px;
-  left: 0;
-  width: 12px;
-  height: 12px;
+  top: 1px;
+  left: -26px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   border: 2px solid #2d3440;
 }
 
 .control__mark--checkbox {
   border-radius: 3px;
+}
+
+.control__input:hover + .control__mark {
+  border-color: #fcfcfc;
+}
+
+.control__input:focus + .control__mark {
+  border-color: #fcfcfc;
+}
+
+.control__input:disabled + .control__mark {
+  border-color: #2d3440;
+  opacity: 0.5;
+}
+
+.control__input[type="radio"]:checked + .control__mark::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2d3440;
+  content: "";
+}
+
+.control__input[type="radio"]:checked:hover + .control__mark::before {
+  background-color: #fcfcfc;
+}
+
+.control__input[type="radio"]:checked:focus + .control__mark::before {
+  background-color: #fcfcfc;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark {
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/checkbox-ckecked.svg");
+  background-size: 16px 16px;
+  border: none;
+}
+
+.control__input[type="checkbox"]:checked:hover + .control__mark {
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/checkbox-checked-hover.svg");
+  background-size: 16px 16px;
+  border: none;
+}
+
+.control__input[type="checkbox"]:checked:focus + .control__mark {
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/checkbox-checked-hover.svg");
+  background-size: 16px 16px;
+  border: none;
+}
+
+.control__input[type="checkbox"]:checked:disabled + .control__mark {
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/checkbox-ckecked.svg");
+  background-size: 16px 16px;
+  border: none;
+  opacity: 0.5;
 }
 
 .control__label {
