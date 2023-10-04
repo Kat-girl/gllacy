@@ -14,11 +14,28 @@
         <nav class="navigation navigation-site">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--catalog" href="catalog.html">
+              <a class="navigation__link navigation__link--catalog" href="#">
                 <span class="navigation__link-text">Каталог</span>
                 <svg class="navigation__link-icon" width="16" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.8 7.05a.67.67 0 1 0-.93.95l4.66 4.66a.66.66 0 0 0 .95 0L13.14 8a.67.67 0 0 0-.94-.95L8 11.25l-4.2-4.2Z"/></svg>
               </a>
               <span class="visually-hidden">Открыть дополнительное меню каталога</span>
+              <div class="popup popup--hidden dropdown-menu">
+                <h3 class="dropdown-menu__title">Новинки</h3>
+                <ul class="dropdown-menu__list">
+                  <li class="dropdown-menu__item">
+                    <a class="dropdown-menu__link" href="catalog.html">Сливочное</a>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <a class="dropdown-menu__link" href="#">Щербеты</a>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <a class="dropdown-menu__link" href="#">Фруктовый лед</a>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <a class="dropdown-menu__link" href="#">Мелорин</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="#">Доставка и оплата</a>
@@ -36,6 +53,14 @@
                 <svg class="navigation__link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.66 7.33a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.45a.67.67 0 1 1-.94.94l-2.45-2.45Z"/></svg>
                 <span class="visually-hidden">Поиск</span>
               </a>
+              <div class="popup popup__search popup__search--hidden">
+                <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+                  <input class="form__input popup__input" type="text" name="search" placeholder="Поиск по сайту">
+                  <button class="popup__clear-button popup__clear-button--hidden" type="reset">
+                    <svg class="popup__clear-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.8 4.14a.67.67 0 1 0-.94-.94L8 7.06 4.14 3.2a.67.67 0 1 0-.94.94L7.06 8 3.2 11.86a.67.67 0 1 0 .94.94L8 8.94l3.86 3.86a.67.67 0 1 0 .94-.94L8.94 8l3.86-3.86Z"/></svg>
+                  </button>
+                </form>
+              </div>
             </li>
             <li class="navigation__item navigation-user__item">
               <a class="navigation__link navigation-user__link navigation-user__link--login" href="#">
@@ -103,7 +128,7 @@
               </button>
             </li>
           </ol>
-          <ul class="slider__social-list social-list">
+          <ul class="slider__social-list social social-list">
             <li class="slider__social-item social-item">
               <a class="social__link" href="#" target="_blank">
                 <span class="social__underlay"></span>
@@ -286,7 +311,7 @@
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
-        <ul class="footer__social-list social-list">
+        <ul class="footer__social-list social social-list">
           <li class="footer__social-item social-item">
             <a class="social__link" href="https://t.me/htmlacademy" target="_blank">
               <span class="social__underlay"></span>
