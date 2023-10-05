@@ -1720,17 +1720,13 @@ body {
   z-index: 1;
 }
 
-.popup__search {
+.popup--search {
   box-sizing: border-box;
   position: absolute;
   right: 0;
   padding: 24px 16px;
   width: 356px;
   z-index: 2;
-}
-
-.popup__search--hidden {
-  display: none;
 }
 
 .popup__input {
@@ -1756,8 +1752,125 @@ body {
   opacity: 0.4;
 }
 
-.navigation__item:hover .popup {
-  display: block;
+.cart {
+  right: 0;
+  width: 441px;
+  padding: 48px;
+  padding-bottom: 38px;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.popup__title {
+  margin: 0;
+  margin-bottom: 32px;
+  color: #2d3440;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.cart__list {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cart__list::after {
+  height: 1px;
+  transform: translateY(8px);
+  background-color: #e7e7e7;
+  content: "";
+}
+
+.cart__item {
+  display: grid;
+  grid-template-columns: 46px 148px 87px 16px;
+  gap: 4px 16px;
+  align-items: center;
+}
+
+.cart__image {
+  grid-column: 1 / 2;
+  grid-row: 1 / span 2;
+}
+
+.cart__title {
+  margin: 0;
+  color: #2d3440;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.cart__cost-container {
+  margin: 0;
+  color: #b9b9b9;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.cart__price-container {
+  color: #2d3440;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  grid-column: 3 / 4;
+  grid-row: 1 / span 2;
+}
+
+.cart__delete-item-button {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  grid-column: 4 / 5;
+  grid-row: 1 / span 2;
+}
+
+.cart__delete-item-button:hover {
+  cursor: pointer;
+}
+
+.cart__delete-item-icon {
+  fill: #2d3440;
+}
+
+.cart__summary-container {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+}
+
+.cart__total-value-container {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.cart--empty {
+  width: 288px;
+  padding-left: 0;
+  padding-bottom: 48px;
+  padding-right: 0;
+}
+
+.popup__title--empty-cart {
+  margin: 0;
+  text-align: center;
 }
 
 .dropdown-menu {
