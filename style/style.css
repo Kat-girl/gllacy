@@ -222,11 +222,10 @@ body {
 }
 
 .navigation-site {
-  width: 550px;
+  margin-right: auto;
 }
 
 .navigation-user {
-  width: 470px;
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
@@ -297,7 +296,6 @@ body {
 
 .navigation__link--phone {
   font-weight: 700;
-  /* padding: 8px 0; */
 }
 
 .navigation__link--search {
@@ -305,12 +303,15 @@ body {
   border-radius: 50%;
 }
 
+.navigation__link--hidden-text {
+  display: none;
+}
+
 .navigation-user__link--login {
   font-size: 14px;
 }
 
 .navigation-user__link--cart {
-  width: 115px;
   font-size: 14px;
 }
 
@@ -862,13 +863,13 @@ body {
 
 /* newsletter-container */
 .newsletter-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin-bottom: 84px;
 }
 
 .news {
-  width: 100%;
   border-radius: 16px;
   background: #d3d3d3 url("../img/news-set-up.jpg") no-repeat bottom -105px right -78px;
   background-size: 115%;
@@ -897,7 +898,6 @@ body {
 }
 
 .newsletter {
-  width: 100%;
   background: #ffffff url("../img/post-background.png") center center;
   border-radius: 16px;
   padding: 6px;
@@ -1750,6 +1750,77 @@ body {
 .popup__clear-icon {
   fill: #2d3440;
   opacity: 0.4;
+}
+
+.popup--login {
+  box-sizing: border-box;
+  right: 0;
+  width: 420px;
+  padding: 48px;
+  padding-bottom: 43px;
+  z-index: 2;
+}
+
+.popup--login-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 23px;
+}
+
+.popup__input--login {
+  margin-bottom: 14px;
+  grid-row: 1 / 2;
+  grid-column: 1 / span 3;
+}
+
+.popup__input--login::placeholder {
+  color: #2d3440;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.popup__input--password {
+  margin-bottom: 30px;
+  grid-row: 2 / 3;
+  grid-column: 1 / span 3;
+}
+
+.popup--login-button {
+  padding: 12px 32px;
+  grid-row: 3 / span 2;
+  grid-column: 1 / 2;
+}
+
+.popup__link {
+  position: relative;
+  width: max-content;
+  color: #2d3440;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.popup__link::after {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  height: 1px;
+  background-color: #2d3440;
+  content: "";
+}
+
+.popup__link--restore-password {
+  margin-bottom: -6px;
+  grid-row: 3 / 4;
+  grid-column: 2 / span 2;
+}
+
+.popup__link--register {
+  grid-row: 4 / 5;
+  grid-column: 2 / span 2;
 }
 
 .cart {
