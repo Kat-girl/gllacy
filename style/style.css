@@ -333,6 +333,20 @@ body {
   margin: auto;
 }
 
+.main__wrapper--catalog {
+  position: relative;
+}
+
+.main__wrapper--catalog::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(252, 252, 252, 0.3);
+  content: "";
+}
+
 .slider {
   position: relative;
   display: flex;
@@ -1598,7 +1612,7 @@ body {
   display: flex;
   justify-content: end;
   padding-top: 41px;
-  padding-bottom: 41px;
+  padding-bottom: 51px;
 }
 
 .pagination-container {
